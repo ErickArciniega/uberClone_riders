@@ -12,8 +12,6 @@ import FirebaseAuth
 class SignInVC: UIViewController {
     
     private let RIDER_SEGUE = "RiderVC";
-    
-    //private let DRIVER_SEGUE = "DriverVC";
 
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -26,8 +24,6 @@ class SignInVC: UIViewController {
     }
 
     @IBAction func logIn(_ sender: Any) {
-        
-      
         
         if emailTextField.text != "" && passwordTextField.text != "" {
             AuthProvider.Instance.login(withEmail: emailTextField.text!, password: passwordTextField.text!, loginHandler:  { (message) in

@@ -76,7 +76,7 @@ class AuthProvider{
         }
         
         return true;
-    }
+    }//logout
     
     private func handleErrors(err: NSError, loginHandler: LoginHandler?) {
         
@@ -113,6 +113,6 @@ class AuthProvider{
             
         }
         
-    }
+    }//handle errors
     
-}
+}//class

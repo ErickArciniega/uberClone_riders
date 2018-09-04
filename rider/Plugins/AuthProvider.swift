@@ -8,6 +8,7 @@
 
 import Foundation
 import FirebaseAuth
+import FirebaseDatabase
 
 //handler
 typealias LoginHandler = (_ msg: String?) -> Void;
@@ -41,6 +42,42 @@ class AuthProvider{
         }
     } //login func
     
+    func signUp(withEmail: String, password: String, loginHandler: LoginHandler?) {
+        
+        Auth.auth().createUser(withEmail: withEmail, password: password) { (user, error) in
+            
+            if error != nil {
+                self.handleErrors(err: error! as NSError, loginHandler: loginHandler);
+            }else {
+                
+                if (user != nil) {
+                    
+                    //store the user in db
+                
+                    //login in the user
+                    self.login(withEmail: withEmail, password: password, loginHandler: loginHandler);
+                
+                }
+                
+            }
+            
+        }
+    }//SignUP
+    
+    func logOut() -> Bool{
+        
+        if Auth.auth().currentUser != nil{
+            do{
+                try Auth.auth().signOut();
+                return true;
+            }catch {
+                return false;
+            }
+        }
+        
+        return true;
+    }
+    
     private func handleErrors(err: NSError, loginHandler: LoginHandler?) {
         
         if let errCode = AuthErrorCode(rawValue: err.code){
@@ -69,6 +106,7 @@ class AuthProvider{
             
             default:
                 loginHandler?(LoginErrorCode.PROBLEM_CONNECTING);
+                print("el ERROR ESSSSSS \(errCode)");
                 break;
                 
             }

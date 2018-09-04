@@ -71,17 +71,17 @@
                     <connections>
                         <outlet property="emailTextField" destination="fmW-lj-vK2" id="0TG-HM-aag"/>
                         <outlet property="passwordTextField" destination="iUg-ri-Zbc" id="Of5-so-7dd"/>
-                        <segue destination="sTo-QC-6uR" kind="show" identifier="DriverVC" id="Rc1-s3-edl"/>
+                        <segue destination="sTo-QC-6uR" kind="show" identifier="RiderVC" id="DqR-Nr-EXd"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="136.80000000000001" y="133.5832083958021"/>
         </scene>
-        <!--View Controller-->
+        <!--RiderVC-->
         <scene sceneID="EHT-go-MES">
             <objects>
-                <viewController id="sTo-QC-6uR" sceneMemberID="viewController">
+                <viewController id="sTo-QC-6uR" customClass="RiderVC" customModule="rider" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CcZ-O3-gFX">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -91,7 +91,11 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <items>
                                     <navigationItem title="Riders" id="A9i-IB-kja">
-                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="I9D-4q-fbk"/>
+                                        <barButtonItem key="leftBarButtonItem" title="Logout" id="I9D-4q-fbk">
+                                            <connections>
+                                                <action selector="logout:" destination="sTo-QC-6uR" id="fII-e6-mlp"/>
+                                            </connections>
+                                        </barButtonItem>
                                     </navigationItem>
                                 </items>
                             </navigationBar>
@@ -104,11 +108,17 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="21"/>
                                 <state key="normal" title="Call"/>
+                                <connections>
+                                    <action selector="callUber:" destination="sTo-QC-6uR" eventType="touchUpInside" id="XiH-AL-l0i"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="4lu-YB-vKL"/>
                     </view>
+                    <connections>
+                        <outlet property="myMap" destination="rEN-V5-vcx" id="6gn-aJ-SCl"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ByL-Hg-9S7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

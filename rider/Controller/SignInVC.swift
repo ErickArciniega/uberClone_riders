@@ -11,7 +11,9 @@ import FirebaseAuth
 
 class SignInVC: UIViewController {
     
-    private let DRIVER_SEGUE = "DriverVC";
+    private let RIDER_SEGUE = "RiderVC";
+    
+    //private let DRIVER_SEGUE = "DriverVC";
 
     @IBOutlet weak var emailTextField: UITextField!
     
@@ -25,15 +27,17 @@ class SignInVC: UIViewController {
 
     @IBAction func logIn(_ sender: Any) {
         
+      
+        
         if emailTextField.text != "" && passwordTextField.text != "" {
             AuthProvider.Instance.login(withEmail: emailTextField.text!, password: passwordTextField.text!, loginHandler:  { (message) in
-                
+
                 if message != nil {
                     self.alertTheUser(title: "Problem with authentication", message: message!);
                 }else {
-                    print("LOGIN SUCCESS");
+                    self.performSegue(withIdentifier: self.RIDER_SEGUE, sender: nil);
                 }
-                
+
             });
         }else {
             alertTheUser(title: "Email And Password Are Required", message: "Please enter email and password in the text fields")
@@ -41,6 +45,21 @@ class SignInVC: UIViewController {
         
     }
     @IBAction func signUp(_ sender: Any) {
+        
+        if emailTextField.text != "" && passwordTextField.text != "" {
+            
+            AuthProvider.Instance.signUp(withEmail: emailTextField.text!, password: passwordTextField.text!) { (message) in
+                
+                if message != nil {
+                    self.alertTheUser(title: "Problen With Creating A New User", message: message!);
+                }else{
+                    self.performSegue(withIdentifier: self.RIDER_SEGUE, sender: nil);
+                }
+            }
+            
+        }else {
+            alertTheUser(title: "Email And Password Are Required", message: "Please enter email and password in the text fields")
+        }
         
     }
     

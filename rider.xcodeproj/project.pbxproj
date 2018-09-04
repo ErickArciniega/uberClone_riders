@@ -18,6 +18,7 @@
 		CF0AF9FA213DDCD300688B21 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF0AF9F9213DDCD300688B21 /* SignInVC.swift */; };
 		CF0AFA01213DE6E300688B21 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = CF0AFA00213DE6E300688B21 /* GoogleService-Info.plist */; };
 		CF67BF64213ED817003D44FD /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF67BF63213ED817003D44FD /* AuthProvider.swift */; };
+		CF67BF69213F25E7003D44FD /* RiderVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = CF67BF68213F25E7003D44FD /* RiderVC.swift */; };
 		D2DC8710536B5295C4E744B8 /* Pods_rider.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0724C7513FD5A7B007D94751 /* Pods_rider.framework */; };
 /* End PBXBuildFile section */
 
@@ -61,6 +62,7 @@
 		CF0AF9F9213DDCD300688B21 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		CF0AFA00213DE6E300688B21 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = SOURCE_ROOT; };
 		CF67BF63213ED817003D44FD /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		CF67BF68213F25E7003D44FD /* RiderVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RiderVC.swift; sourceTree = "<group>"; };
 		E4F952E64F0230D0F22E7244 /* Pods-riderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-riderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-riderUITests/Pods-riderUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		F899F2073014FCB8A03471E4 /* Pods-rider.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rider.release.xcconfig"; path = "Pods/Target Support Files/Pods-rider/Pods-rider.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				CF0AF9F9213DDCD300688B21 /* SignInVC.swift */,
+				CF67BF68213F25E7003D44FD /* RiderVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -423,6 +426,7 @@
 				CF67BF64213ED817003D44FD /* AuthProvider.swift in Sources */,
 				CF0AF9FA213DDCD300688B21 /* SignInVC.swift in Sources */,
 				CF0AF9C5213DB28400688B21 /* AppDelegate.swift in Sources */,
+				CF67BF69213F25E7003D44FD /* RiderVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -2,7 +2,7 @@
 //  RiderVC.swift
 //  rider
 //
-//  Created by gustavo gomez on 04/09/18.
+//  Created by erickArciniega on 04/09/18.
 //  Copyright © 2018 erickArciniega. All rights reserved.
 //
 
